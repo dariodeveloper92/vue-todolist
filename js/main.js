@@ -8,6 +8,18 @@ Rifare l'esercizio della to do list come fatto assieme in classe:
 - ogni item ha una "x" associata: cliccando su di essa, l'item viene rimosso dalla lista
 - predisporre un input per aggiungere un nuovo item alla lista: digitando il tasto invio oppure ciccando su un pulsante, il testo digitato viene aggiunto alla lista*/
 
+const app = new Vue(
+    {
+        el: '#root',
+        data: {
+            newTodo: '',
+            toDos: [
+                ' Fare i compiti',
+                ' Fare la spesa',
+                ' Fare il bucato'
+            ],
+        },
+})
 
 /*BONUS:
 -modificare la struttura dell'array dei todos. Da array di stringhe diventa array di oggetti.
