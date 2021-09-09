@@ -11,7 +11,6 @@
     <title> Vue To Do List </title>
 </head>
 <body>
-    
     <!-- id root -->
     <div id="root" class="container">
         <!-- logo -->
@@ -20,18 +19,20 @@
         </div>
         <!-- input e button -->
         <div class="new-todo">
-            <input type="text">
-            <button> Aggiungi </button>
+            <input type="text" v-model="newTodo" placeholder="New To Do" @keyUp.enter="addToDo">
+            <button @click="addToDo"> Aggiungi </button>
         </div>
         <!-- elenco -->
         <div class="elenco">
-            <ul>
-                <li>  
-                    {{ todo }}
-                    <i class="fas fa-times"></i>
+            <ul v-if="toDos.length > 0">
+                <li v-for=" (todo, index) in toDos">  <!--indice-->
+                    {{ todo.title }}  
+                    <i class="fas fa-times" @click="removeToDo(index)">
+                    {{ todo.done }}
+                    </i><!--indice-->
                 </li>
             </ul>
-            <h2> Non ci sono to do </h2> <!--Se non ci sono dati compare questa scritta-->
+            <h2 v-else> Non ci sono to do </h2> <!--Se non ci sono dati compare questa scritta-->
         </div>
     </div>
 

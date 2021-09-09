@@ -13,12 +13,28 @@ const app = new Vue(
         el: '#root',
         data: {
             newTodo: '',
-            toDos: [
+            /*toDos: [
                 ' Fare i compiti',
                 ' Fare la spesa',
                 ' Fare il bucato'
-            ],
+            ],*/
+            toDos: [ //Bonus - Array di Oggetti
+                {title: 'fare i compiti', done: 'true',},
+                {title: 'fare la spesa', done: 'false',},
+                {title: 'fare il bucato', done: 'true',},
+            ]
         },
+        methods: {
+            addToDo() { //clicca il button aggiungi: stampare in pagina un item per ogni elemento contenuto in un array
+                if(this.newTodo != "") {
+                    this.toDos.push({title: this.newTodo, done: false}); // metodo "PUSH"
+                    this.newTodo="";
+                }
+            },
+            removeToDo(index) { // cliccando sulla "x", l'item viene rimosso dalla lista
+                this.toDos.splice(index, 1); // metodo "SPLICE" = cancella 1 elemento secondo l'indice 
+            }
+        }
 })
 
 /*BONUS:
