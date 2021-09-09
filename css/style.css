@@ -4,8 +4,37 @@
     box-sizing: border-box;
 }
 
-/* common -------------------*/
-/* fine common -------------*/
-
 /* container -------------------*/
+.container {
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+}
 /* fine container -------------*/
+
+/* logo -------------------*/
+.logo{
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 300px;
+}
+/* fine logo -------------*/
+
+/* elenco -------------------*/
+.elenco {
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 5px;    
+}
+
+.elenco li,
+.elenco i {
+    display: flex;
+    justify-content:space-between;
+}
+/* fine elenco -------------*/
+
+
