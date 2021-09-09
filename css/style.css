@@ -21,6 +21,25 @@
     max-width: 300px;
 }
 
+/* new-todo -------------------*/
+.new-todo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+input,
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+input {
+    width: 250px;
+}
+
 /* elenco -------------------*/
 .elenco {
     width: 100%;
