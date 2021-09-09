@@ -43,12 +43,14 @@ input {
 /* elenco -------------------*/
 .elenco {
     width: 100%;
-    background-color: lightgray;
+    background-color: #F3F3F3;
     border-radius: 5px;    
+    padding: 35px;
 }
 
 .elenco li,
 .elenco i {
     display: flex;
     justify-content:space-between;
+    padding: 5px;
 }
